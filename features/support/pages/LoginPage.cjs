@@ -1,4 +1,4 @@
-export default class LoginPage {
+class LoginPage {
     constructor(page) {
         this.page = page;
         this.url = 'https://www.saucedemo.com/';
@@ -23,3 +23,5 @@ export default class LoginPage {
         await this.page.click(this.loginButton);
     }
 }
+
+module.exports = LoginPage;
