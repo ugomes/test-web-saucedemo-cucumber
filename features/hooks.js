@@ -1,6 +1,6 @@
-import { Before, After } from '@cucumber/cucumber';
-import { chromium } from 'playwright';
-import LoginPage from './support/pages/LoginPage.js';
+const { Before, After } = require('@cucumber/cucumber');
+const { chromium } = require('playwright');
+const LoginPage = require('./support/pages/LoginPage.js'); // Mantenha o .js se o LoginPage for ESM, ou remova se for CJS
 
 Before(async function () {
     this.browser = await chromium.launch({ headless: false });
@@ -17,3 +17,4 @@ After(async function () {
         await this.browser.close();
     }
 });
+
