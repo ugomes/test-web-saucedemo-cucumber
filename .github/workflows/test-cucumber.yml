@@ -21,4 +21,4 @@ jobs:
     - name: Install Playwright browsers
       run: npx playwright install --with-deps chromium
     - name: Run tests
-      run: npx cucumber-js
+      run: npx cucumber-js --require features/hooks.cjs --require features/step_definitions/*.cjs
