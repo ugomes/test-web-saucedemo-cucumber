@@ -1,0 +1,21 @@
+{
+  "name": "saucedemopo145",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "cucumber-js",
+    "report": "node generate-report.js",
+    "test:report": "npm run test && npm run report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@cucumber/cucumber": "^10.8.0",
+    "@cucumber/pretty-formatter": "^1.0.0",
+    "multiple-cucumber-html-reporter": "^3.6.2",
+    "playwright": "^1.44.1"
+  }
+}
