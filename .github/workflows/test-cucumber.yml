@@ -20,5 +20,11 @@ jobs:
       run: npm ci
     - name: Install Playwright browsers
       run: npx playwright install --with-deps chromium
-    - name: Run tests
-      run: npx cucumber-js --require features/hooks.cjs --require features/step_definitions/*.cjs
+    - name: Run Cucumber tests
+      run: npx cucumber-js --format html:reports/cucumber-report.html
+
+    - name: Upload Cucumber HTML Report
+      uses: actions/upload-artifact@v4
+      with:
+        name: cucumber-report
+        path: reports/cucumber-report.html
