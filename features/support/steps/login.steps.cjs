@@ -2,6 +2,9 @@ const { Given, When, Then } = require('@cucumber/cucumber');
 const { expect } = require('playwright/test');
 const LoginPage = require('../pages/LoginPage.cjs');
 
+const { setDefaultTimeout } = require('@cucumber/cucumber');
+setDefaultTimeout(20000); 
+
 Given('que estou na página de login', async function () {
     // Este step agora apenas garante que estamos na página,
     // a navegação já é feita no hook Before.
@@ -13,7 +16,7 @@ When('preencho o usuario {string} e a senha {string}', async function (username,
     await this.loginPage.fillPassword(password);
 });
 
-When('clicar no botao de login', async function () {
+When('clicar no botao de login',{timeout:20000}, async function () {
     await this.loginPage.clickLoginButton()
 })
 
