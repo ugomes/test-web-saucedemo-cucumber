@@ -46,3 +46,11 @@ Then('vou para a página {string} e vejo {string}', async function (expectedUrlP
     const selector = this.page.locator(`text=${expectedText}`)
     await selector.first().waitFor({ state: 'visible' })
 })
+
+Then('vejo a mensagem de erro {string}', async function (expectedErrorMessage) {
+    const errorLocator = this.page.locator('[data-test="error"]')
+    await errorLocator.waitFor({ state: 'visible', timeout: 5000 })
+    
+    const errorMessage = await errorLocator.textContent()
+    expect(errorMessage).toContain(expectedErrorMessage)
+})
