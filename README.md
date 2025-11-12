@@ -137,7 +137,7 @@ As tags utilizadas nos cenários são:
 ### Executar testes com uma tag específica
 
 ```bash
-npx cucumber-js --tags @smoke
+npx cucumber-js --tags "@smoke"
 ```
 
 ---
