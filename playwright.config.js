@@ -10,9 +10,5 @@ export default defineConfig({
         video: 'retain-on-failure',
         trace: 'retain-on-failure',
     },
-    webServer: {
-        command: 'npm run start',
-        port: 3000,
-        reuseExistingServer: !process.env.CI,
-    }
+    
 })
