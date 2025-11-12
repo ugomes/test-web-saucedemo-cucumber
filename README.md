@@ -131,8 +131,8 @@ As tags utilizadas nos cenários são:
 | `@smoke` | Testes críticos de funcionalidade básica |
 | `@positivo` | Testes com dados válidos |
 | `@negativo` | Testes com dados inválidos ou cenários de erro |
-| `@login` | Testes relacionados a login |
-| `@inventory` | Testes relacionados ao inventário |
+| `@credenciais-invalidas` | Testes com credenciais inválidas |
+| `@campos-vazios` | Testes com campos vazios |
 
 ### Executar testes com uma tag específica
 
