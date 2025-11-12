@@ -6,8 +6,16 @@
   "type": "module",
   "scripts": {
     "test": "cucumber-js",
+    "test:smoke": "cucumber-js --tags @smoke",
+    "test:positivo": "cucumber-js --tags @positivo",
+    "test:negativo": "cucumber-js --tags @negativo",
+    "test:credenciais": "cucumber-js --tags @credenciais-invalidas",
+    "test:campos": "cucumber-js --tags @campos-vazios",
     "report": "node generate-report.js",
-    "test:report": "npm run test && npm run report"
+    "test:report": "npm test && npm run report",
+    "test:smoke:report": "npm run test:smoke && npm run report",
+    "test:negativo:report": "npm run test:negativo && npm run report",
+    "test:positivo:report": "npm run test:positivo && npm run report"
   },
   "keywords": [],
   "author": "",
