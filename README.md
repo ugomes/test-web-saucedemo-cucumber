@@ -120,6 +120,28 @@ Por padrão, os testes são executados no navegador Chromium em modo headed (com
 
 ---
 
+## 🏷️ Executando com Tags
+
+### Tags Disponíveis
+
+As tags utilizadas nos cenários são:
+
+| Tag | Descrição |
+|-----|-----------|
+| `@smoke` | Testes críticos de funcionalidade básica |
+| `@positivo` | Testes com dados válidos |
+| `@negativo` | Testes com dados inválidos ou cenários de erro |
+| `@login` | Testes relacionados a login |
+| `@inventory` | Testes relacionados ao inventário |
+
+### Executar testes com uma tag específica
+
+```bash
+npx cucumber-js --tags @smoke
+```
+
+---
+
 ## 📊 Gerando Relatórios
 
 Após a execução dos testes, um relatório em JSON é gerado no diretório `reports/`. Para gerar um relatório HTML mais amigável e detalhado, execute o comando:
