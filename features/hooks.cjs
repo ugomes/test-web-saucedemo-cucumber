@@ -5,8 +5,7 @@ const LoginPage = require('./support/pages/LoginPage.cjs');
 Before(async function () {
     try {
         this.browser = await chromium.launch({ 
-            headless: false,
-            
+            headless: true,
         });
         this.page = await this.browser.newPage();
         this.loginPage = new LoginPage(this.page); 
