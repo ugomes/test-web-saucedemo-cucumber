@@ -3,18 +3,30 @@ const { chromium } = require('playwright');
 const LoginPage = require('./support/pages/LoginPage.cjs');
 
 Before(async function () {
-    
-    this.browser = await chromium.launch({ 
-        headless: false,
-        slowMo: 1000  // Adiciona delay de 1 segundo entre ações para visualizar melhor
-    });
-    this.page = await this.browser.newPage();
-    this.loginPage = new LoginPage(this.page); 
-    await this.loginPage.goto();
-    
+    try {
+        this.browser = await chromium.launch({ 
+            headless: false,
+            
+        });
+        this.page = await this.browser.newPage();
+        this.loginPage = new LoginPage(this.page); 
+        await this.loginPage.goto();
+    } catch (error) {
+        console.error('Erro ao inicializar o navegador:', error);
+        throw error;
+    }
 });
 
 After(async function () {
-    await this.browser.close();
-    
+    try {
+        if (this.page) {
+            await this.page.close();
+        }
+        
+        if (this.browser) {
+            await this.browser.close();
+        }
+    } catch (error) {
+        console.error('Erro ao fechar o navegador:', error);
+    }
 });
