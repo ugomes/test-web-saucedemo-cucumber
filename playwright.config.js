@@ -4,10 +4,15 @@ export default defineConfig({
     timeout: 30000,
     retries: 1,
     use: {
-        headless: false,
+        headless: true,
         viewport: {width: 1280, height: 720},
         screenshot: 'on-first-failure',
         video: 'retain-on-failure',
         trace: 'retain-on-failure',
+    },
+    webServer: {
+        command: 'npm run start',
+        port: 3000,
+        reuseExistingServer: !process.env.CI,
     }
 })
