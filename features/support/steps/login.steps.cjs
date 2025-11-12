@@ -8,7 +8,7 @@ setDefaultTimeout(20000);
 Given('que estou na página de login', async function () {
     // Este step agora apenas garante que estamos na página,
     // a navegação já é feita no hook Before.
-    // Se precisar de uma verificação extra, pode ser adicionada aqui.
+   
 });
 
 When('preencho o usuario {string} e a senha {string}', async function (username, password) {

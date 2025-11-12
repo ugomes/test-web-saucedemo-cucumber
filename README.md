@@ -9,7 +9,24 @@
   <img src="https://img.shields.io/badge/License-ISC-blue?style=for-the-badge" alt="License"/>
 </p>
 
-Este projeto implementa testes automatizados de ponta a ponta (E2E) para o site de demonstração [Sauce Demo](https://www.saucedemo.com/). Foi desenvolvido utilizando Playwright para automação de navegador e Cucumber para a escrita de cenários em BDD (Behavior-Driven Development).
+# Sauce Demo - Testes E2E com Playwright e Cucumber
+
+## 📋 Visão Geral
+
+Este projeto implementa testes end-to-end (E2E) automatizados para o site de demonstração Sauce Demo (www.saucedemo.com) utilizando **Playwright** e **Cucumber** frameworks. Segue as práticas de **Behavior-Driven Development (BDD)** com sintaxe Gherkin e implementa o padrão de design **Page Object Model (POM)** para melhor manutenção dos testes.
+
+## 🚀 Começando
+
+### Pré-requisitos
+- Node.js versão 18 ou superior
+- npm (gerenciador de pacotes do Node.js)
+
+### Instalação
+
+1. Clone o repositório e navegue até o diretório do projeto:
+```bash
+git clone <repository-url>
+cd SauceDemoPO145
 
 ## Tabela de Conteúdos
 
@@ -28,7 +45,7 @@ Este projeto implementa testes automatizados de ponta a ponta (E2E) para o site 
 -   **[Playwright](https://playwright.dev/)**: Framework de automação de navegador.
 -   **[Cucumber.js](https://cucumber.io/docs/cucumber/javascript/)**: Ferramenta para BDD, permitindo escrever testes em linguagem natural.
 -   **[Multiple Cucumber HTML Reporter](https://github.com/wswebcreation/multiple-cucumber-html-reporter)**: Para geração de relatórios de teste em HTML.
--   **Page Object Model (POM)**: Padrão de projeto para organizar e manter os seletores e interações com as páginas.
+-   Page Object Model (POM): Padrão de projeto para organizar e manter os seletores e interações com as páginas.
 
 ## Pré-requisitos
 
@@ -116,4 +133,3 @@ Para contribuir com este projeto, siga os seguintes passos:
 5. Abra um Pull Request.
 
 Certifique-se de que os testes passem antes de submeter sua contribuição.
-
